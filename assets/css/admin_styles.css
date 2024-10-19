@@ -1,0 +1,610 @@
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/Lora/Lora-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/Lora/Lora-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/Lora/Lora-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/Lora/Lora-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/Lora/Lora-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/Lora/Lora-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/Lora/Lora-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/Lora/Lora-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* Lato Font Family */
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato/Lato-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+:root {
+    /* Color Styles */
+    --dark-green: #104324;
+    --medium-green: #4E9823;
+    --light-green: #23C145;
+    --bg-color: #F1EFE7;
+    --black: #231F20;
+    --white: #FFFFFF;
+    --td-even: rgba(16, 67, 36, 0.2);
+
+    /* Font Size */
+    --fs-h1: 35px;
+    --fs-body: 16px;
+    --fs-active: 16px;
+    --fs-active-2: 16px;
+    --fs-th: 23px;
+    --fs-td: 20px;
+    --fs-username: 23px;
+    --fs-position: 14px;
+
+    /* Font Weight */
+    --fw-h1: bold;
+    --fw-body: normal;
+    --fw-active: 900;
+    --fw-active-2: bold;
+    --fw-th: bold;
+    --fw-td: bold;
+    --fw-username: 600;
+    --fw-position: normal;
+
+    /* Addtional Variable */
+    --bs-btn-close-bg-dark-green: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23104324'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+
+    --bs-btn-close-bg-medium-green: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234E9823'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+}
+
+body {
+    font-family: "Lato";
+    background-color: var(--bg-color);
+    color: var(--dark-green);
+    margin: 0;
+    padding: 0;
+    font-size: var(--fs-body);
+    font-weight: var(--fw-body);
+}
+
+h1 {
+    font-family: 'Lora';
+    font-weight: var(--fw-h1);
+    font-style: normal;
+    font-size: var(--fs-h1);
+}
+
+/* Header */
+header {
+    background-color: var(--bg-color);
+    color: var(--dark-green);
+    text-align: center;
+    display: flex;
+    height: 100px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo {
+    width: auto;
+    height: 100px;
+}
+
+/* Nav Item */
+nav {
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: auto;
+}
+
+nav ul li {
+    padding: 20px 60px;
+    align-items: center;
+    font-size: var(--fs-body);
+}
+
+a.nav-items:active {
+    font-weight: var(--fw-active);
+    text-decoration: underline;
+}
+
+.nav-items {
+    color: var(--dark-green);
+    text-decoration: none;
+}
+
+.user-container {
+    display: flex;
+    align-items: center;
+    padding-right: 40px;
+}
+
+.user-details {
+    text-align: left;
+    padding-right: 20px;
+}
+
+.username {
+    color: var(--medium-green);
+    font-size: var(--fs-username);
+    font-weight: var(--fw-username);
+}
+
+.position {
+    color: var(--dark-green);
+    font-size: var(--fw-position);
+    font-weight: var(--fw-position);
+
+}
+
+main {
+    margin: 20px 104px;
+}
+
+footer {
+    background-color: var(--bg-color);
+    color: var(--dark-green);
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Table */
+
+/* General Table Styling */
+table {
+    width: 100%;
+    border-collapse: separate;
+    /* Use 'separate' to ensure border-radius and table borders */
+    border-spacing: 0;
+    /* Ensure there is no extra space between cells */
+    border: 1px solid var(--dark-green);
+    /* Set the table border */
+    border-radius: 20px;
+    /* Round the corners */
+    overflow: hidden;
+    /* Ensure border-radius applies properly */
+}
+
+/* Table Header */
+.styled-table thead tr {
+    background-color: #0d4324;
+    /* Dark green color */
+    color: var(--bg-color);
+    /* Light cream color */
+    text-align: left;
+    font-weight: bold;
+    height: 67px;
+    font-size: var(--fs-th);
+}
+
+.styled-table tbody tr {
+    height: 60px;
+    font-weight: var(--fw-td);
+    font-size: var(--fs-td);
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+th:first-child,
+td:first-child {
+    padding-left: 50px;
+}
+
+/* Zebra Stripes for Table Rows */
+.styled-table tbody tr:nth-child(even) {
+    background-color: var(--td-even);
+    /* Lighter green for even rows */
+    color: var(--dark-green);
+    /* Dark green text */
+}
+
+.styled-table tbody tr:nth-child(odd) {
+    background-color: var(--bg-color);
+    /* Light cream color for odd rows */
+    color: var(--dark-green);
+    /* Dark green text */
+}
+
+/* Hover Effect on Table Rows */
+.styled-table tbody tr:hover {
+    background-color: #b0d4b4;
+    /* Light green highlight on hover */
+    color: var(--dark-green);
+}
+
+.modal.slide-from-right .modal-dialog {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    margin: 0;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-out;
+    max-width: 465px;
+    border-radius: 0px !important;
+}
+
+.modal.show .modal-dialog {
+    transform: translateX(0);
+}
+
+.modal-content {
+    border: 1px solid var(--dark-green);
+    background-color: var(--bg-color);
+    height: 100%;
+    border-radius: 0;
+}
+
+.modal-header {
+    background-color: var(--bg-color);
+    height: 100px;
+    padding-left: 35px;
+    border-bottom: 1px solid var(--dark-green);
+}
+
+.modal-header button:first-child {
+    margin-right: 55px;
+}
+
+.modal-title {
+    font-weight: bold;
+    color: var(--dark-green);
+}
+
+/* .btn-close {
+    background-color: transparent;
+    color: var(--dark-green) !important;
+    background: var(--bs-btn-close-bg-dark-green) !important;
+    box-sizing: content-box;
+    width: 1em !important;
+    height: 1em !important;
+}
+
+.btn-close:hover {
+    color: var(--medium-green);
+    background: var(--bs-btn-close-bg-medium-green) !important;
+
+} */
+
+/* Remove default button styles */
+.btn-close {
+    background-color: transparent;
+    border: none;
+    opacity: 1;
+    position: relative;
+}
+
+/* Override the pseudo-element content to prevent duplicate */
+.btn-close::before {
+    content: '';
+    /* Reset content to nothing */
+}
+
+.btn-close svg {
+    fill: #104324 !important;
+    /* Change the close button to #104324 */
+    width: 1.5rem;
+    /* Adjust size if necessary */
+    height: 1.5rem;
+}
+
+/* Hover effect for the close button */
+.btn-close:hover svg {
+    fill: #4E9823 !important;
+    /* Change hover color to #4E9823 */
+}
+
+.btn-close:focus {
+    box-shadow: none;
+}
+
+.modal-body {
+    color: #2f4f2f;
+    line-height: 1.5;
+    padding: 50px 40px;
+}
+
+.modal-footer {
+    border-top: 1px solid var(--dark-green);
+    background-color: var(--bg-color);
+    margin: 0px 40px;
+    padding: 15px 0px 30px;
+}
+
+.btn-primary {
+    background-color: transparent;
+    border: none;
+    color: var(--dark-green);
+    font-size: var(--fs-body);
+}
+
+.btn-primary:hover {
+    opacity: 0.8;
+}
+
+.btn-icons {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-icons:hover {
+    background-color: transparent;
+    color: var(--medium-green);
+}
+
+.modal-name {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.tag-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.tag {
+    border: 1px solid var(--dark-green);
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.content-wrapper {
+    padding: 35px 0px;
+}
+
+.container-title {
+    font-weight: var(--fw-active);
+    padding-bottom: 15px;
+}
+
+.content-container {
+    padding: 28px 25px;
+    border: 1px solid var(--dark-green);
+    border-radius: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.content-container::-webkit-scrollbar {
+    width: 8px;
+    /* Width of the scrollbar */
+}
+
+/* The scrollbar track (background) */
+.content-container::-webkit-scrollbar-track {
+    background: transparent;
+    /* Light gray background for the track */
+    border-radius: 8px;
+    /* Rounded corners */
+    margin: 12px;
+}
+
+/* The handle of the scrollbar (thumb) */
+.content-container::-webkit-scrollbar-thumb {
+    background: var(--dark-green);
+    /* Gray color for the thumb */
+    border-radius: 10px;
+    /* Rounded corners for the thumb */
+    border: 2px solid #f1f1f1;
+    /* Adds a border around the thumb for a cleaner look */
+}
+
+/* Hover state for the thumb */
+.content-container::-webkit-scrollbar-thumb:hover {
+    background: var(--medium-green);
+    /* Darker color on hover */
+}
+
+/* Optional: styling the scrollbar corner in case of both horizontal and vertical scrollbars */
+.content-container::-webkit-scrollbar-corner {
+    background: #f1f1f1;
+    /* Matches the scrollbar track background */
+}
+
+
+/* Responsive Table */
+@media (max-width: 768px) {
+
+    /* Header */
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .logo {
+        height: 60px;
+    }
+
+    nav ul {
+        display: none;
+        /* Hide navigation on smaller screens */
+    }
+
+    /* Add a hamburger menu for mobile */
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Toggle the menu when clicked */
+    .menu-icon.active+nav ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .user-container {
+        padding-top: 10px;
+        justify-content: center;
+    }
+
+    /* Table */
+    .styled-table thead {
+        display: none;
+        /* Hides the table header on smaller screens */
+    }
+
+    .styled-table tr {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .styled-table td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .styled-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    /* Header */
+    .logo {
+        height: 50px;
+    }
+
+    .user-container {
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0;
+    }
+
+    .user-details {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .img-profile-container img {
+        width: 35px;
+        height: 35px;
+    }
+}
